@@ -1,0 +1,87 @@
+# Manage Jenkins >> System
+# Do not add "remotingSecurity" section as per https://www.jenkins.io/doc/book/security/controller-isolation/jep-235/#api-compatibility
+# Do not add 'labelAtoms' section as these labels should be controlled through nodes 'labelString' key-value pairs in nodes.yaml
+jenkins:
+
+  # Configure System (Jenkins controller / built-in node)
+  systemMessage: "Welcome to Jenkins Test!"
+  numExecutors: 2
+  labelString: "jenkins-controller"
+  mode: NORMAL
+  quietPeriod: 5
+  scmCheckoutRetryCount: 0
+  primaryView: # Only view type (all, list, etc) and name key-value pair is required for this to work; view must be defined in views.yaml
+    all:
+      name: "all"
+  projectNamingStrategy:
+    roleBased:
+      forceExistingJobs: false
+
+  # Usage Statistics
+  noUsageStatistics: true
+
+  # Administrative monitors configuration
+  disabledAdministrativeMonitors:
+  - "hudson.util.DoubleLaunchChecker"
+
+
+unclassified:
+
+  # Global Build Discarders
+  buildDiscarders:
+    configuredBuildDiscarders:
+    - "jobBuildDiscarder"
+
+  # Fingerprints
+  fingerprints:
+    fingerprintCleanupDisabled: false
+    storage: "file"
+
+  # Global Pipeline Libraries
+  globalLibraries:
+    libraries:
+    - defaultVersion: "main"
+      name: "utils"
+      retriever:
+        modernSCM:
+          libraryPath: "shared_libraries/utils/"
+          scm:
+            git:
+              id: "6fc87cf5-d8df-492e-9773-786c0e84c7c7"
+              remote: "https://github.com/Minreaux/jenkins-test"
+              traits:
+              - sparseCheckoutPaths:
+                  extension:
+                    sparseCheckoutPaths:
+                    - path: "shared_libraries/utils/"
+
+  # Jenkins Location
+  location:
+    adminAddress: "address not configured yet <nobody@nowhere>"
+    url: "http://localhost:8080/"
+
+  # E-mail Notification
+  mailer:
+    charset: "UTF-8"
+    useSsl: false
+    useTls: false
+
+  # SCM Polling
+  pollSCM:
+    pollingThreadCount: 10
+
+  # Git plugin
+  scmGit:
+    addGitTagAction: false
+    allowSecondFetch: false
+    createAccountBasedOnEmail: false
+    disableGitToolChooser: false
+    hideCredentials: false
+    showEntireCommitSummaryInChanges: false
+    useExistingAccountWithSameEmail: false
+
+  # Timestamper
+  timestamper:
+    allPipelines: true
+    elapsedTimeFormat: "'<b>'HH:mm:ss.S'</b> '"
+    systemTimeFormat: "'<b>'HH:mm:ss'</b> '"

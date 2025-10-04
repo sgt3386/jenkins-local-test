@@ -1,0 +1,1 @@
+Prints an info or warning log message.

@@ -1,0 +1,42 @@
+# Plugin Installation Manager Tool for Jenkins list of plugins to install
+# Plugin dependencies are handled automatically by the tool
+plugins:
+  - artifactId: authorize-project
+    source:
+      version: latest
+  - artifactId: configuration-as-code
+    source:
+      version: latest
+  - artifactId: dark-theme
+    source:
+      version: latest
+  - artifactId: extended-read-permission
+    source:
+      version: latest
+  - artifactId: git
+    source:
+      version: latest
+  - artifactId: job-dsl
+    source:
+      version: latest
+  - artifactId: mock-security-realm
+    source:
+      version: latest
+  - artifactId: workflow-aggregator # AKA Pipeline plugin
+    source:
+      version: latest
+  - artifactId: pipeline-graph-view
+    source:
+      version: latest
+  - artifactId: pipeline-stage-view
+    source:
+      version: latest
+  - artifactId: pipeline-utility-steps
+    source:
+      version: latest
+  - artifactId: role-strategy
+    source:
+      version: latest
+  - artifactId: timestamper
+    source:
+      version: latest

@@ -1,0 +1,13 @@
+# Manage Jenkins >> Tools
+tool:
+
+  # Git installations
+  git:
+    installations:
+    - home: "git"
+      name: "Default"
+
+  # Maven Configuration
+  mavenGlobalConfig:
+    globalSettingsProvider: "standard"
+    settingsProvider: "standard"

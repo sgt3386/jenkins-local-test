@@ -1,0 +1,5 @@
+# Manage Jenkins >> In-process Script Approval
+security: 
+  scriptApproval:
+    approvedScriptHashes: []
+    approvedSignatures: []

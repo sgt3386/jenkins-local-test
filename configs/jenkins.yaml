@@ -1,0 +1,266 @@
+credentials:
+  system:
+    domainCredentials:
+    - credentials:
+      - string:
+          description: "Example secret text credential"
+          id: "example-secret-text"
+          scope: GLOBAL
+          secret: "{AQAAABAAAAAg8XMQbakObxlEr03H1T+pBCtRHG6BkuRVrr1ozqmNTSFf62WSc5dIEuXK7iesoWdZ}"
+      - usernamePassword:
+          description: "Example username/password credential"
+          id: "example-username-password"
+          password: "{AQAAABAAAAAgw26/Ao655qo3+mi0atzqjS/mSdyTO9VhEEr/C2AvO2vrqppbZ895ADlRrubTnR2A}"
+          scope: GLOBAL
+          username: "change-me-username"
+      - basicSSHUserPrivateKey:
+          description: "Example SSH private key credential"
+          id: "example-ssh-key"
+          privateKeySource:
+            directEntry:
+              privateKey: "{AQAAABAAAACwifIY3XEvXvhz8pihuxrmC3QQKw2b6KFlpGPQsgvXtgjjQp/F3EycKlw21Rf9LRdnVBMvTByMa1AGxbKVt71Yvi3XvaOAuUK8zALVqlZkKp+n6skkRfE/3QecJkwUqKfly64hEheraiN+HU239WfvAakBoc6jYRsCRVy3nwcMup81FSK/f2ZPLqUa5DVbQAQoJmAuzam+nmtAXo3v0rN/p04/VSR2e0OJtIkb6UUVr5u+tCMOddcWtnsTQ4VVV78C}"
+          scope: GLOBAL
+          username: "ssh-user"
+jenkins:
+  agentProtocols:
+  - "JNLP4-connect"
+  - "Ping"
+  authorizationStrategy:
+    roleBased:
+      roles:
+        global:
+        - entries:
+          - group: "FullAdmin"
+          name: "FullAdmin"
+          pattern: ".*"
+          permissions:
+          - "Overall/Administer"
+        - entries:
+          - group: "JobAdmin"
+          name: "JobAdmin"
+          pattern: ".*"
+          permissions:
+          - "Metrics/ThreadDump"
+          - "Job/Build"
+          - "Job/Discover"
+          - "Job/Read"
+          - "Agent/ExtendedRead"
+          - "Credentials/View"
+          - "Agent/Connect"
+          - "Run/Replay"
+          - "Agent/Disconnect"
+          - "Job/Cancel"
+          - "Job/ExtendedRead"
+          - "Overall/Read"
+          - "Overall/SystemRead"
+          - "Job/Configure"
+          - "Job/Workspace"
+          - "Metrics/View"
+          - "View/Read"
+          - "Metrics/HealthCheck"
+        - entries:
+          - group: "ServiceUser"
+          name: "ServiceUser"
+          pattern: ".*"
+          permissions:
+          - "Job/ExtendedRead"
+          - "Job/Build"
+          - "Job/Delete"
+          - "Job/Create"
+          - "Job/Discover"
+          - "Job/Read"
+          - "Agent/Build"
+          - "Job/Configure"
+        - entries:
+          - group: "authenticated"
+          name: "User"
+          pattern: ".*"
+          permissions:
+          - "Overall/Read"
+        items:
+        - entries:
+          - group: "JobManager"
+          name: "JobManager"
+          pattern: "(?!^seedJobs$)(^.*$)"
+          permissions:
+          - "Job/Cancel"
+          - "Job/Build"
+          - "Job/Discover"
+          - "Job/Read"
+          - "View/Read"
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: false
+  disableRememberMe: false
+  disabledAdministrativeMonitors:
+  - "hudson.util.DoubleLaunchChecker"
+  labelAtoms:
+  - name: "built-in"
+  - name: "jenkins-controller"
+  labelString: "jenkins-controller"
+  log:
+    recorders:
+    - loggers:
+      - level: "INFO"
+        name: "io.jenkins.plugins.casc"
+      name: "Configuration as Code Logs"
+  markupFormatter: "plainText"
+  mode: NORMAL
+  myViewsTabBar: "standard"
+  noUsageStatistics: true
+  nodeMonitors:
+  - "architecture"
+  - "clock"
+  - diskSpace:
+      freeSpaceThreshold: "1GiB"
+      freeSpaceWarningThreshold: "2GiB"
+  - "swapSpace"
+  - tmpSpace:
+      freeSpaceThreshold: "1GiB"
+      freeSpaceWarningThreshold: "2GiB"
+  - "responseTime"
+  numExecutors: 2
+  primaryView:
+    all:
+      name: "all"
+  projectNamingStrategy:
+    roleBased:
+      forceExistingJobs: false
+  quietPeriod: 5
+  remotingSecurity:
+    enabled: true
+  scmCheckoutRetryCount: 0
+  securityRealm:
+    mock:
+      data: |-
+        admin FullAdmin
+        bob JobAdmin
+        bill JobAdmin
+        tim JobManager
+        tom JobManager
+        auto ServiceUser
+        jane User
+        john User
+      groupIdStrategy: "caseInsensitive"
+      randomDelay: false
+      userIdStrategy: "caseInsensitive"
+  slaveAgentPort: -1
+  systemMessage: "Welcome to Jenkins Test!"
+  updateCenter:
+    sites:
+    - id: "default"
+      url: "https://updates.jenkins.io/update-center.json"
+  views:
+  - list:
+      columns:
+      - "status"
+      - "weather"
+      - "jobName"
+      - "lastSuccess"
+      - "lastFailure"
+      - "lastDuration"
+      - "buildButton"
+      description: "Lists all jobs other than seedJobs."
+      filterQueue: true
+      includeRegex: "(?!^seedJobs$)(^.*$)"
+      name: "Normal Jobs"
+  - all:
+      name: "all"
+  viewsTabBar: "standard"
+globalCredentialsConfiguration:
+  configuration:
+    providerFilter:
+      includes:
+        classNames:
+        - "com.cloudbees.hudson.plugins.folder.properties.FolderCredentialsProvider"
+        - "com.cloudbees.plugins.credentials.SystemCredentialsProvider$ProviderImpl"
+    typeFilter:
+      includes:
+        classNames:
+        - "com.cloudbees.plugins.credentials.impl.CertificateCredentialsImpl"
+        - "com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl"
+        - "com.cloudbees.jenkins.plugins.sshcredentials.impl.BasicSSHUserPrivateKey"
+        - "org.jenkinsci.plugins.plaincredentials.impl.FileCredentialsImpl"
+        - "org.jenkinsci.plugins.plaincredentials.impl.StringCredentialsImpl"
+appearance:
+  pipelineGraphView:
+    showGraphOnBuildPage: true
+    showGraphOnJobPage: false
+  prism:
+    theme: PRISM
+  themeManager:
+    disableUserThemes: false
+security:
+  apiToken:
+    creationOfLegacyTokenEnabled: false
+    tokenGenerationOnCreationEnabled: false
+    usageStatisticsEnabled: true
+  cps:
+    hideSandbox: true
+  gitHooks:
+    allowedOnAgents: false
+    allowedOnController: false
+  gitHostKeyVerificationConfiguration:
+    sshHostKeyVerificationStrategy: "knownHostsFileVerificationStrategy"
+  globalJobDslSecurityConfiguration:
+    useScriptSecurity: true
+  queueItemAuthenticator:
+    authenticators:
+    - global:
+        strategy:
+          specificUsersAuthorizationStrategy:
+            userid: "auto"
+  scriptApproval:
+    forceSandbox: true
+unclassified:
+  buildDiscarders:
+    configuredBuildDiscarders:
+    - "jobBuildDiscarder"
+  fingerprints:
+    fingerprintCleanupDisabled: false
+    storage: "file"
+  globalLibraries:
+    libraries:
+    - defaultVersion: "main"
+      name: "utils"
+      retriever:
+        modernSCM:
+          libraryPath: "shared_libraries/utils/"
+          scm:
+            git:
+              id: "6fc87cf5-d8df-492e-9773-786c0e84c7c7"
+              remote: "https://github.com/Minreaux/jenkins-test"
+              traits:
+              - sparseCheckoutPaths:
+                  extension:
+                    sparseCheckoutPaths:
+                    - path: "shared_libraries/utils/"
+  location:
+    adminAddress: "address not configured yet <nobody@nowhere>"
+    url: "http://localhost:8080/"
+  mailer:
+    charset: "UTF-8"
+    useSsl: false
+    useTls: false
+  pollSCM:
+    pollingThreadCount: 10
+  scmGit:
+    addGitTagAction: false
+    allowSecondFetch: false
+    createAccountBasedOnEmail: false
+    disableGitToolChooser: false
+    hideCredentials: false
+    showEntireCommitSummaryInChanges: false
+    useExistingAccountWithSameEmail: false
+  timestamper:
+    allPipelines: true
+    elapsedTimeFormat: "'<b>'HH:mm:ss.S'</b> '"
+    systemTimeFormat: "'<b>'HH:mm:ss'</b> '"
+tool:
+  git:
+    installations:
+    - home: "git"
+      name: "Default"
+  mavenGlobalConfig:
+    globalSettingsProvider: "standard"
+    settingsProvider: "standard"

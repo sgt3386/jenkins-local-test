@@ -1,0 +1,70 @@
+# Manage Jenkins >> Security
+jenkins:
+
+  # Authentication
+  disableRememberMe: false
+  securityRealm:
+    mock:
+      data: |-
+        admin FullAdmin
+        bob JobAdmin
+        bill JobAdmin
+        tim JobManager
+        tom JobManager
+        auto ServiceUser
+        jane User
+        john User
+      groupIdStrategy: "caseInsensitive"
+      randomDelay: false
+      userIdStrategy: "caseInsensitive"
+
+  # Markup Formatter
+  markupFormatter: "plainText"
+
+  # Agents
+  slaveAgentPort: -1
+  agentProtocols:
+  - "JNLP4-connect"
+  - "Ping"
+
+  # CSRF Protection
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: false
+
+
+security:
+
+  # API Token
+  apiToken:
+    creationOfLegacyTokenEnabled: false
+    tokenGenerationOnCreationEnabled: false
+    usageStatisticsEnabled: true
+
+  # Git Hooks
+  gitHooks:
+    allowedOnAgents: false
+    allowedOnController: false
+
+  # Git Host Key Verification Configuration
+  gitHostKeyVerificationConfiguration:
+    sshHostKeyVerificationStrategy: "knownHostsFileVerificationStrategy"
+
+  # Enable script security for Job DSL scripts
+  globalJobDslSecurityConfiguration:
+    useScriptSecurity: true
+
+  # Access Control for Builds
+  queueItemAuthenticator:
+    authenticators:
+    - global:
+        strategy:
+          specificUsersAuthorizationStrategy:
+            userid: "auto"
+
+  # Sandbox Configuration
+  # NOTE: When "Force the use of sandbox globally in the system" is enabled, it enables both of these options
+  cps:
+    hideSandbox: true
+  scriptApproval:
+    forceSandbox: true

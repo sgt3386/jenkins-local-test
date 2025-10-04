@@ -1,0 +1,20 @@
+# Manage Jenkins >> Credentials Providers
+globalCredentialsConfiguration:
+  configuration:
+
+    # Providers
+    providerFilter:
+      includes:
+        classNames:
+        - "com.cloudbees.hudson.plugins.folder.properties.FolderCredentialsProvider"
+        - "com.cloudbees.plugins.credentials.SystemCredentialsProvider$ProviderImpl"
+
+    # Types
+    typeFilter:
+      includes:
+        classNames:
+        - "com.cloudbees.plugins.credentials.impl.CertificateCredentialsImpl" # Certificate
+        - "com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl" # Username/Password
+        - "com.cloudbees.jenkins.plugins.sshcredentials.impl.BasicSSHUserPrivateKey" # SSH Username with private key
+        - "org.jenkinsci.plugins.plaincredentials.impl.FileCredentialsImpl" # Secret file
+        - "org.jenkinsci.plugins.plaincredentials.impl.StringCredentialsImpl" # Secret text

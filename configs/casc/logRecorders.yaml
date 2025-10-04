@@ -1,0 +1,8 @@
+# Manage Jenkins >> System Log >> Log Recorders
+jenkins:
+  log:
+    recorders:
+    - loggers:
+      - level: "INFO"
+        name: "io.jenkins.plugins.casc"
+      name: "Configuration as Code Logs"

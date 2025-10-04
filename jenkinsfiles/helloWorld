@@ -1,0 +1,41 @@
+#!/usr/bin/env groovy
+
+// Jenkinsfile that defines a declarative Jenkins pipeline
+library("utils@$BRANCH_NAME")
+
+pipeline
+{
+    agent any
+
+    stages
+    {
+        stage('Greeting with Custom Step')
+        {
+            steps
+            {
+                sayHello('World')
+            }
+        }
+
+        stage('Greeting with Script')
+        {
+            environment
+            {
+                SCRIPT_PATH = 'scripts/hello.py'
+            }
+
+            steps
+            {
+                checkout(
+                    scmGit(
+                        branches: [[name: BRANCH_NAME]],
+                        extensions: [[$class: 'SparseCheckoutPaths', sparseCheckoutPaths: [[path: SCRIPT_PATH]]]],
+                        userRemoteConfigs: [[url: 'https://github.com/Minreaux/jenkins-test']]
+                    )
+                )
+
+                pwsh("python3 ${SCRIPT_PATH} \"World\"")
+            }
+        }
+    }
+}

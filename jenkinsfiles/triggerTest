@@ -1,0 +1,26 @@
+#!/usr/bin/env groovy
+
+// Jenkinsfile that defines a declarative Jenkins pipeline used to test Jenkins triggers with Job DSL
+// For triggers to be present after seedJobs applies, the trigger must be present in the Job DSL script, not the pipeline Jenkinsfile
+pipeline
+{
+    agent any
+
+    options
+    {
+        // Keep the history for only 10 builds and keep only 1 build artifact
+        buildDiscarder(logRotator(artifactNumToKeepStr: '1', numToKeepStr: '10'))
+        skipDefaultCheckout()
+    }
+
+    stages
+    {
+        stage('Testing trigger...')
+        {
+            steps
+            {
+                echo("Trigger test ${BUILD_NUMBER}")
+            }
+        }
+    }
+}

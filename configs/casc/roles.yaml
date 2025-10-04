@@ -1,0 +1,73 @@
+jenkins:
+  # Manage Jenkins >> Security >> Authorization
+  authorizationStrategy:
+    roleBased:
+      # Manage Jenkins >> Manage and Assign Roles
+      roles:
+
+        # Global roles
+        global:
+        - entries:
+          - group: "FullAdmin"
+          name: "FullAdmin"
+          pattern: ".*"
+          permissions:
+          - "Overall/Administer"
+
+        - entries:
+          - group: "JobAdmin"
+          name: "JobAdmin"
+          pattern: ".*"
+          permissions:
+          - "Agent/Connect"
+          - "Agent/Disconnect"
+          - "Agent/ExtendedRead"
+          - "Credentials/View"
+          - "Job/Build"
+          - "Job/Cancel"
+          - "Job/Configure"
+          - "Job/Discover"
+          - "Job/ExtendedRead"
+          - "Job/Read"
+          - "Job/Workspace"
+          - "Metrics/HealthCheck"
+          - "Metrics/ThreadDump"
+          - "Metrics/View"
+          - "Overall/Read"
+          - "Overall/SystemRead"
+          - "Run/Replay"
+          - "View/Read"
+
+        - entries:
+          - group: "ServiceUser"
+          name: "ServiceUser"
+          pattern: ".*"
+          permissions:
+          - "Agent/Build"
+          - "Job/Build"
+          - "Job/Configure"
+          - "Job/Create"
+          - "Job/Delete"
+          - "Job/Discover"
+          - "Job/ExtendedRead"
+          - "Job/Read"
+
+        - entries:
+          - group: "authenticated"
+          name: "User"
+          pattern: ".*"
+          permissions:
+          - "Overall/Read"
+
+        # Item roles
+        items:
+        - entries:
+          - group: "JobManager"
+          name: "JobManager"
+          pattern: "(?!^seedJobs$)(^.*$)" # Any job except "seedJobs" is visible
+          permissions:
+          - "Job/Build"
+          - "Job/Cancel"
+          - "Job/Discover"
+          - "Job/Read"
+          - "View/Read"

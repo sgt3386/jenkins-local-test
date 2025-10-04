@@ -1,0 +1,18 @@
+#!/usr/bin/env groovy
+
+// Jenkinsfile that defines a declarative Jenkins pipeline used to test the multibranch pipeline BRANCH_NAME parameter
+pipeline
+{
+    agent any
+
+    stages
+    {
+        stage('Printing Branch Name')
+        {
+            steps
+            {
+                echo("Current BRANCH_NAME is \"${BRANCH_NAME}\"")
+            }
+        }
+    }
+}

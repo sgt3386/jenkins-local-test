@@ -1,0 +1,9 @@
+# Jobs (AKA Projects)
+# If pulling from GitHub, must use raw file links
+# If using script code, script code is Groovy, not YAML
+jobs:
+  - providedEnv:
+      GIT_URL: 'https://github.com/Minreaux/jenkins-test.git'
+      BRANCH_NAME: 'main'
+      JENKINSFILE_PATH: 'jenkinsfiles/seedJobs'
+  - file: ./configs/job_dsl/seedJobs.groovy
