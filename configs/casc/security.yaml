@@ -66,5 +66,3 @@ security:
   # NOTE: When "Force the use of sandbox globally in the system" is enabled, it enables both of these options
   cps:
     hideSandbox: true
-  scriptApproval:
-    forceSandbox: true
