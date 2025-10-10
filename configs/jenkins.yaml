@@ -210,8 +210,6 @@ security:
         strategy:
           specificUsersAuthorizationStrategy:
             userid: "auto"
-  scriptApproval:
-    forceSandbox: true
 unclassified:
   buildDiscarders:
     configuredBuildDiscarders:
