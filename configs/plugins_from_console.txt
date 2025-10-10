@@ -1,45 +1,49 @@
   - name: analysis-model-api
-    version: 12.4.0
+    version: 12.9.1
   - name: antisamy-markup-formatter
     version: 162.v0e6ec0fcfcf6
   - name: apache-httpcomponents-client-4-api
     version: 4.5.14-208.v438351942757
   - name: apache-httpcomponents-client-5-api
-    version: 5.3.1-110.v77252fb_d4da_5
+    version: 5.4-136.v5a_21779c63f8
   - name: asm-api
     version: 9.7.1-97.v4cc844130d97
   - name: authorize-project
     version: 1.8.1
   - name: aws-credentials
-    version: 231.v08a_59f17d742
+    version: 243.v41c19a_fb_5dcf
   - name: aws-java-sdk-api-gateway
-    version: 1.12.767-467.vb_e93f0c614b_6
+    version: 1.12.772-477.v650d756dcf6d
   - name: aws-java-sdk-cloudformation
-    version: 1.12.767-467.vb_e93f0c614b_6
+    version: 1.12.772-477.v650d756dcf6d
   - name: aws-java-sdk-cloudfront
-    version: 1.12.767-467.vb_e93f0c614b_6
+    version: 1.12.772-477.v650d756dcf6d
   - name: aws-java-sdk-codedeploy
-    version: 1.12.767-467.vb_e93f0c614b_6
+    version: 1.12.772-477.v650d756dcf6d
   - name: aws-java-sdk-ec2
-    version: 1.12.767-467.vb_e93f0c614b_6
+    version: 1.12.772-477.v650d756dcf6d
   - name: aws-java-sdk-ecr
-    version: 1.12.767-467.vb_e93f0c614b_6
+    version: 1.12.772-477.v650d756dcf6d
   - name: aws-java-sdk-elasticbeanstalk
-    version: 1.12.767-467.vb_e93f0c614b_6
+    version: 1.12.772-477.v650d756dcf6d
   - name: aws-java-sdk-elasticloadbalancingv2
-    version: 1.12.767-467.vb_e93f0c614b_6
+    version: 1.12.772-477.v650d756dcf6d
   - name: aws-java-sdk-iam
-    version: 1.12.767-467.vb_e93f0c614b_6
+    version: 1.12.772-477.v650d756dcf6d
   - name: aws-java-sdk-lambda
-    version: 1.12.767-467.vb_e93f0c614b_6
+    version: 1.12.772-477.v650d756dcf6d
   - name: aws-java-sdk-minimal
-    version: 1.12.767-467.vb_e93f0c614b_6
+    version: 1.12.772-477.v650d756dcf6d
   - name: aws-java-sdk-organizations
-    version: 1.12.767-467.vb_e93f0c614b_6
+    version: 1.12.772-477.v650d756dcf6d
   - name: aws-java-sdk-sns
-    version: 1.12.767-467.vb_e93f0c614b_6
+    version: 1.12.772-477.v650d756dcf6d
   - name: aws-java-sdk-sqs
-    version: 1.12.767-467.vb_e93f0c614b_6
+    version: 1.12.772-477.v650d756dcf6d
+  - name: aws-java-sdk2-core
+    version: 2.30.10-22.v1339d66b_e0f4
+  - name: aws-java-sdk2-ec2
+    version: 2.30.10-22.v1339d66b_e0f4
   - name: bootstrap5-api
     version: 5.3.3-1
   - name: bouncycastle-api
@@ -51,13 +55,13 @@
   - name: caffeine-api
     version: 3.2.0-161.v691ef352cee1
   - name: checks-api
-    version: 2.2.0
+    version: 2.2.3
   - name: claim
     version: 554.va_f9b_58b_0a_088
   - name: cloudbees-folder
     version: 6.955.v81e2a_35c08d3
   - name: command-launcher
-    version: 115.vd8b_301cc15d0
+    version: 116.vd85919c54a_d6
   - name: commons-compress-api
     version: 1.26.1-2
   - name: commons-lang3-api
@@ -73,15 +77,15 @@
   - name: dark-theme
     version: 514.va_3ea_73d65dc1
   - name: data-tables-api
-    version: 2.1.4-1
+    version: 2.1.8-1
   - name: datadog
-    version: 7.1.3
+    version: 9.1.8
   - name: display-url-api
     version: 2.204.vf6fddd8a_8b_e9
   - name: durable-task
     version: 581.v299a_5609d767
   - name: echarts-api
-    version: 5.5.1-1
+    version: 5.5.1-4
   - name: eddsa-api
     version: 0.3.0-4.v84c6f0f4969e
   - name: extended-read-permission
@@ -91,7 +95,7 @@
   - name: font-awesome-api
     version: 6.6.0-2
   - name: forensics-api
-    version: 2.5.0
+    version: 2.7.0
   - name: git
     version: 5.5.2
   - name: git-client
@@ -103,7 +107,7 @@
   - name: gson-api
     version: 2.11.0-85.v1f4e87273c33
   - name: hashicorp-vault-plugin
-    version: 370.v946b_53544a_30
+    version: 371.v884a_4dd60fb_6
   - name: instance-identity
     version: 201.vd2a_b_5a_468a_a_6
   - name: ionicons-api
@@ -123,9 +127,9 @@
   - name: jdk-tool
     version: 80.v8a_dee33ed6f0
   - name: jfrog
-    version: 1.5.1
+    version: 1.5.5
   - name: jnr-posix-api
-    version: 3.1.19-2
+    version: 3.1.20-125.vb_6ec4b_21b_15e
   - name: job-dsl
     version: 1.89
   - name: joda-time-api
@@ -135,13 +139,13 @@
   - name: json-api
     version: 20241224-119.va_dca_a_b_ea_7da_5
   - name: json-path-api
-    version: 2.9.0-58.v62e3e85b_a_655
+    version: 2.9.0-118.v7f23ed82a_8b_8
   - name: junit
-    version: 1296.vb_f538b_c88630
+    version: 1312.v1a_235a_b_94a_31
   - name: mailer
     version: 488.v0c9639c1a_eb_3
   - name: matrix-project
-    version: 832.va_66e270d2946
+    version: 839.vff91cd7e3a_b_2
   - name: metrics
     version: 4.2.21-458.vcf496cb_839e4
   - name: mina-sshd-api-common
@@ -205,7 +209,7 @@
   - name: simple-theme-plugin
     version: 196.v96d9592f4efa_
   - name: slack
-    version: 741.v00f9591c586d
+    version: 751.v2e44153c8fe1
   - name: snakeyaml-api
     version: 2.3-123.v13484c65210a_
   - name: ssh-credentials
@@ -229,7 +233,7 @@
   - name: versioncolumn
     version: 243.vda_c20eea_a_8a_f
   - name: warnings-ng
-    version: 11.4.1
+    version: 11.12.0
   - name: workflow-aggregator
     version: 600.vb_57cdd26fdd7
   - name: workflow-api
@@ -252,4 +256,4 @@
     version: 943.v8b_0d01a_7b_a_08
   - name: xml-job-to-job-dsl
     version: 0.1.13
-Result: java.util.stream.SortedOps$OfRef@6ac441e8
+Result: java.util.stream.SortedOps$OfRef@48981424
