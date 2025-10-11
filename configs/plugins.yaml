@@ -381,4 +381,4 @@ plugins:
     version: 0.1.13
 - artifactId: mock-security-realm
   source:
-    version: latest
+    version: 87.v8c9fc41f4319
