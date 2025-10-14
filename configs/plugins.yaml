@@ -3,7 +3,7 @@
 plugins:
 - artifactId: analysis-model-api
   source:
-    version: 12.4.0
+    version: 12.9.1
 - artifactId: antisamy-markup-formatter
   source:
     version: 162.v0e6ec0fcfcf6
@@ -12,58 +12,64 @@ plugins:
     version: 4.5.14-208.v438351942757
 - artifactId: apache-httpcomponents-client-5-api
   source:
-    version: 5.3.1-110.v77252fb_d4da_5
+    version: 5.4-136.v5a_21779c63f8
 - artifactId: asm-api
   source:
-    version: 9.7-33.v4d23ef79fcc8
+    version: 9.7.1-97.v4cc844130d97
 - artifactId: authorize-project
   source:
-    version: 1.7.2
+    version: 1.8.1
 - artifactId: aws-credentials
   source:
-    version: 231.v08a_59f17d742
+    version: 243.v41c19a_fb_5dcf
 - artifactId: aws-java-sdk-api-gateway
   source:
-    version: 1.12.767-467.vb_e93f0c614b_6
+    version: 1.12.772-477.v650d756dcf6d
 - artifactId: aws-java-sdk-cloudformation
   source:
-    version: 1.12.767-467.vb_e93f0c614b_6
+    version: 1.12.772-477.v650d756dcf6d
 - artifactId: aws-java-sdk-cloudfront
   source:
-    version: 1.12.767-467.vb_e93f0c614b_6
+    version: 1.12.772-477.v650d756dcf6d
 - artifactId: aws-java-sdk-codedeploy
   source:
-    version: 1.12.767-467.vb_e93f0c614b_6
+    version: 1.12.772-477.v650d756dcf6d
 - artifactId: aws-java-sdk-ec2
   source:
-    version: 1.12.767-467.vb_e93f0c614b_6
+    version: 1.12.772-477.v650d756dcf6d
 - artifactId: aws-java-sdk-ecr
   source:
-    version: 1.12.767-467.vb_e93f0c614b_6
+    version: 1.12.772-477.v650d756dcf6d
 - artifactId: aws-java-sdk-elasticbeanstalk
   source:
-    version: 1.12.767-467.vb_e93f0c614b_6
+    version: 1.12.772-477.v650d756dcf6d
 - artifactId: aws-java-sdk-elasticloadbalancingv2
   source:
-    version: 1.12.767-467.vb_e93f0c614b_6
+    version: 1.12.772-477.v650d756dcf6d
 - artifactId: aws-java-sdk-iam
   source:
-    version: 1.12.767-467.vb_e93f0c614b_6
+    version: 1.12.772-477.v650d756dcf6d
 - artifactId: aws-java-sdk-lambda
   source:
-    version: 1.12.767-467.vb_e93f0c614b_6
+    version: 1.12.772-477.v650d756dcf6d
 - artifactId: aws-java-sdk-minimal
   source:
-    version: 1.12.767-467.vb_e93f0c614b_6
+    version: 1.12.772-477.v650d756dcf6d
 - artifactId: aws-java-sdk-organizations
   source:
-    version: 1.12.767-467.vb_e93f0c614b_6
+    version: 1.12.772-477.v650d756dcf6d
 - artifactId: aws-java-sdk-sns
   source:
-    version: 1.12.767-467.vb_e93f0c614b_6
+    version: 1.12.772-477.v650d756dcf6d
 - artifactId: aws-java-sdk-sqs
   source:
-    version: 1.12.767-467.vb_e93f0c614b_6
+    version: 1.12.772-477.v650d756dcf6d
+- artifactId: aws-java-sdk2-core
+  source:
+    version: 2.30.10-22.v1339d66b_e0f4
+- artifactId: aws-java-sdk2-ec2
+  source:
+    version: 2.30.10-22.v1339d66b_e0f4
 - artifactId: bootstrap5-api
   source:
     version: 5.3.3-1
@@ -72,82 +78,82 @@ plugins:
     version: 2.30.1.78.1-248.ve27176eb_46cb_
 - artifactId: branch-api
   source:
-    version: 2.1178.v969d9eb_c728e
+    version: 2.1206.vd9f35001c95c
 - artifactId: build-failure-analyzer
   source:
     version: 2.5.2
 - artifactId: caffeine-api
   source:
-    version: 3.1.8-133.v17b_1ff2e0599
+    version: 3.2.0-161.v691ef352cee1
 - artifactId: checks-api
   source:
-    version: 2.2.0
+    version: 2.2.3
 - artifactId: claim
   source:
     version: 554.va_f9b_58b_0a_088
 - artifactId: cloudbees-folder
   source:
-    version: 6.942.vb_43318a_156b_2
+    version: 6.955.v81e2a_35c08d3
 - artifactId: command-launcher
   source:
-    version: 115.vd8b_301cc15d0
+    version: 116.vd85919c54a_d6
 - artifactId: commons-compress-api
   source:
     version: 1.26.1-2
 - artifactId: commons-lang3-api
   source:
-    version: 3.16.0-82.ve2b_07d659d95
+    version: 3.17.0-84.vb_b_938040b_078
 - artifactId: commons-text-api
   source:
-    version: 1.12.0-129.v99a_50df237f7
+    version: 1.13.0-150.vfc0d7966fc38
 - artifactId: configuration-as-code
   source:
-    version: 1850.va_a_8c31d3158b_
+    version: 1873.vea_5814ca_9c93
 - artifactId: credentials
   source:
-    version: 1371.vfee6b_095f0a_3
+    version: 1380.va_435002fa_924
 - artifactId: credentials-binding
   source:
     version: 681.vf91669a_32e45
 - artifactId: dark-theme
   source:
-    version: 479.v661b_1b_911c01
+    version: 514.va_3ea_73d65dc1
 - artifactId: data-tables-api
   source:
-    version: 2.1.4-1
+    version: 2.1.8-1
 - artifactId: datadog
   source:
-    version: 7.1.3
+    version: 9.1.8
 - artifactId: display-url-api
   source:
     version: 2.204.vf6fddd8a_8b_e9
 - artifactId: durable-task
   source:
-    version: 568.v8fb_5c57e8417
+    version: 581.v299a_5609d767
 - artifactId: echarts-api
   source:
-    version: 5.5.1-1
+    version: 5.5.1-4
 - artifactId: eddsa-api
   source:
     version: 0.3.0-4.v84c6f0f4969e
 - artifactId: extended-read-permission
   source:
-    version: 53.v6499940139e5
+    version: 61.vf24570ff3b_e9
 - artifactId: file-operations
   source:
     version: 266.v9d4e1eb_235b_a_
 - artifactId: font-awesome-api
   source:
-    version: 6.6.0-1
+    version: 6.6.0-2
 - artifactId: forensics-api
   source:
-    version: 2.5.0
+    version: 2.7.0
 - artifactId: git
   source:
-    version: 5.4.1
+    version: 5.5.2
 - artifactId: git-client
   source:
-    version: 5.0.0
+    version: 5.0.3
 - artifactId: github
   source:
     version: 1.40.0
@@ -156,19 +162,19 @@ plugins:
     version: 1.321-468.v6a_9f5f2d5a_7e
 - artifactId: gson-api
   source:
-    version: 2.11.0-41.v019fcf6125dc
+    version: 2.11.0-85.v1f4e87273c33
 - artifactId: hashicorp-vault-plugin
   source:
-    version: 370.v946b_53544a_30
+    version: 371.v884a_4dd60fb_6
 - artifactId: instance-identity
   source:
-    version: 185.v303dc7c645f9
+    version: 201.vd2a_b_5a_468a_a_6
 - artifactId: ionicons-api
   source:
     version: 74.v93d5eb_813d5f
 - artifactId: jackson2-api
   source:
-    version: 2.17.0-379.v02de8ec9f64c
+    version: 2.18.3-396.v93cc2d00b_b_7b_
 - artifactId: jakarta-activation-api
   source:
     version: 2.1.3-1
@@ -189,43 +195,46 @@ plugins:
     version: 80.v8a_dee33ed6f0
 - artifactId: jfrog
   source:
-    version: 1.5.1
+    version: 1.5.5
 - artifactId: jnr-posix-api
   source:
-    version: 3.1.19-2
+    version: 3.1.20-125.vb_6ec4b_21b_15e
 - artifactId: job-dsl
   source:
-    version: 1.88
+    version: 1.89
 - artifactId: joda-time-api
   source:
-    version: 2.12.7-29.v5a_b_e3a_82269a_
+    version: 2.13.0-93.v9934da_29b_a_e9
 - artifactId: jquery3-api
   source:
     version: 3.7.1-2
 - artifactId: json-api
   source:
-    version: 20240303-41.v94e11e6de726
+    version: 20241224-119.va_dca_a_b_ea_7da_5
 - artifactId: json-path-api
   source:
-    version: 2.9.0-58.v62e3e85b_a_655
+    version: 2.9.0-118.v7f23ed82a_8b_8
 - artifactId: junit
   source:
-    version: 1296.vb_f538b_c88630
+    version: 1312.v1a_235a_b_94a_31
 - artifactId: mailer
   source:
-    version: 472.vf7c289a_4b_420
+    version: 488.v0c9639c1a_eb_3
 - artifactId: matrix-project
   source:
-    version: 832.va_66e270d2946
+    version: 839.vff91cd7e3a_b_2
 - artifactId: metrics
   source:
-    version: 4.2.21-451.vd51df8df52ec
+    version: 4.2.21-458.vcf496cb_839e4
 - artifactId: mina-sshd-api-common
   source:
-    version: 2.13.2-125.v200281b_61d59
+    version: 2.14.0-143.v2b_362fc39576
 - artifactId: mina-sshd-api-core
   source:
-    version: 2.13.2-125.v200281b_61d59
+    version: 2.14.0-143.v2b_362fc39576
+- artifactId: mock-security-realm
+  source:
+    version: 87.v8c9fc41f4319
 - artifactId: monitoring
   source:
     version: 1.99.0
@@ -246,28 +255,28 @@ plugins:
     version: 540.vb_e8849e1a_b_d8
 - artifactId: pipeline-graph-analysis
   source:
-    version: 216.vfd8b_ece330ca_
+    version: 231.v56354571a_da_0
 - artifactId: pipeline-graph-view
   source:
-    version: 332.vb_232ced67fa_9
+    version: 340.v28cecee8b_25f
 - artifactId: pipeline-groovy-lib
   source:
-    version: 730.ve57b_34648c63
+    version: 749.v70084559234a_
 - artifactId: pipeline-input-step
   source:
-    version: 495.ve9c153f6067b_
+    version: 508.v584c0e9a_2177
 - artifactId: pipeline-milestone-step
   source:
     version: 119.vdfdc43fc3b_9a_
 - artifactId: pipeline-model-api
   source:
-    version: 2.2214.vb_b_34b_2ea_9b_83
+    version: 2.2218.v56d0cda_37c72
 - artifactId: pipeline-model-definition
   source:
-    version: 2.2214.vb_b_34b_2ea_9b_83
+    version: 2.2218.v56d0cda_37c72
 - artifactId: pipeline-model-extensions
   source:
-    version: 2.2214.vb_b_34b_2ea_9b_83
+    version: 2.2218.v56d0cda_37c72
 - artifactId: pipeline-rest-api
   source:
     version: 2.34
@@ -276,22 +285,22 @@ plugins:
     version: 312.v8cd10304c27a_
 - artifactId: pipeline-stage-tags-metadata
   source:
-    version: 2.2214.vb_b_34b_2ea_9b_83
+    version: 2.2218.v56d0cda_37c72
 - artifactId: pipeline-stage-view
   source:
     version: 2.34
 - artifactId: pipeline-utility-steps
   source:
-    version: 2.17.0
+    version: 2.18.0
 - artifactId: plain-credentials
   source:
     version: 183.va_de8f1dd5a_2b_
 - artifactId: plugin-util-api
   source:
-    version: 4.1.0
+    version: 5.1.0
 - artifactId: prism-api
   source:
-    version: 1.29.0-17
+    version: 1.29.0-18
 - artifactId: role-strategy
   source:
     version: 743.v142ea_b_d5f1d3
@@ -303,19 +312,19 @@ plugins:
     version: 696.v778d637b_a_762
 - artifactId: script-security
   source:
-    version: 1354.va_70a_fe478c7f
+    version: 1369.v9b_98a_4e95b_2d
 - artifactId: simple-theme-plugin
   source:
     version: 196.v96d9592f4efa_
 - artifactId: slack
   source:
-    version: 741.v00f9591c586d
+    version: 751.v2e44153c8fe1
 - artifactId: snakeyaml-api
   source:
-    version: 2.2-121.v5a_68b_9300b_d4
+    version: 2.3-123.v13484c65210a_
 - artifactId: ssh-credentials
   source:
-    version: 343.v884f71d78167
+    version: 349.vb_8b_6b_9709f5b_
 - artifactId: ssh-slaves
   source:
     version: 2.973.v0fa_8c0dea_f9f
@@ -345,22 +354,22 @@ plugins:
     version: 243.vda_c20eea_a_8a_f
 - artifactId: warnings-ng
   source:
-    version: 11.4.1
+    version: 11.12.0
 - artifactId: workflow-aggregator
   source:
     version: 600.vb_57cdd26fdd7
 - artifactId: workflow-api
   source:
-    version: 1336.vee415d95c521
+    version: 1358.vfb_5780da_64cb_
 - artifactId: workflow-basic-steps
   source:
     version: 1058.vcb_fc1e3a_21a_9
 - artifactId: workflow-cps
   source:
-    version: 3953.v19f11da_8d2fa_
+    version: 4009.v0089238351a_9
 - artifactId: workflow-durable-task-step
   source:
-    version: 1371.vb_7cec8f3b_95e
+    version: 1378.v6a_3e903058a_3
 - artifactId: workflow-job
   source:
     version: 1436.vfa_244484591f
@@ -375,10 +384,7 @@ plugins:
     version: 678.v3ee58b_469476
 - artifactId: workflow-support
   source:
-    version: 920.v59f71ce16f04
+    version: 943.v8b_0d01a_7b_a_08
 - artifactId: xml-job-to-job-dsl
   source:
     version: 0.1.13
-- artifactId: mock-security-realm
-  source:
-    version: 87.v8c9fc41f4319

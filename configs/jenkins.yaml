@@ -6,11 +6,11 @@ credentials:
           description: "Example secret text credential"
           id: "example-secret-text"
           scope: GLOBAL
-          secret: "{AQAAABAAAAAgb3QLZYwmAZYlRxxysTZnr9gUXjwXfm9WEbWx5aAyLInOXjJzh5cgrL6VAvrLgFU1}"
+          secret: "{AQAAABAAAAAgzVzPlqnAMzYipR5gLU3reiHNiqhrLMnQXW3C6nei9dZtQ2xDpS9fRVMWF6EqjsrF}"
       - usernamePassword:
           description: "Example username/password credential"
           id: "example-username-password"
-          password: "{AQAAABAAAAAgvDtmnzSmo8Nqa6jYyjKtWAW+mAWDhQd1EslbCCMBsaKVbvJaC06WVkOosh8u7lBC}"
+          password: "{AQAAABAAAAAgLNdOHVvHi7k64avpeUvFwGDOEPzJMNOw8cKfaoCvfU7uYpoCFaP8yXKQZDjAUdax}"
           scope: GLOBAL
           username: "change-me-username"
       - basicSSHUserPrivateKey:
@@ -18,7 +18,7 @@ credentials:
           id: "example-ssh-key"
           privateKeySource:
             directEntry:
-              privateKey: "{AQAAABAAAACwJ7o1AcMB+3d7TJ/oV0ClzGO7k5Aj7j3g9/uZ3HIriekWbne9fvUZZ8y3q1g+W/UuphvHO6hGjO6WvPYxQu1Zlh9/V5Bh4GHQrYoiRZaqcNcqquMlhZoJBa2iCgvTiJ+nMySVx0MkHqOKQSnUHEszVTXXbHDaqZcjLD453Mer9LJqaEXCMOilLmPUDvvJrOn1DrpwmBs05sk4lEoaGbn9JbVMdA7aJv9Rs3K7b2g2ApAmSPp/sPvltqzgdQqZKoKe}"
+              privateKey: "{AQAAABAAAACwAs2FT0XP3xN/CUAOkba8pxmt7ny/u98CreutQpWltqe8oME8rWUWx7i8cidHl0Yxi0j/XQ6zCZHJINicTg0/K6Pk7iKM6Siaobw1SNda7kStUg/W9wITh26vw9y12liVkS3v5JuIHP2tcY7EH6PDZ/N/8MtBQLXgRUwzi0k7jn9gfEiRVCW56dBs4/HUNcren+1r1oxFFksHxwCv7CuILugoPPkXTAqmh5wE9YFO4BVaNTIDb+N9/TQ/B7IPIVVl}"
           scope: GLOBAL
           username: "ssh-user"
 jenkins:
@@ -218,6 +218,8 @@ security:
             userid: "auto"
   sSHD:
     port: -1
+  scriptApproval:
+    forceSandbox: true
 unclassified:
   buildDiscarders:
     configuredBuildDiscarders:
@@ -248,19 +250,24 @@ unclassified:
     cacheBuildRuns: true
     ciInstanceName: "jenkins"
     collectBuildLogs: false
+    collectBuildTraces: false
+    datadogClientConfiguration:
+      datadogApiConfiguration:
+        apiKey: "datadogTextApiKey"
+        intake:
+          datadogIntakeSite:
+            site: US1
     emitConfigChangeEvents: false
     emitSecurityEvents: true
     emitSystemEvents: true
     enableCiVisibility: false
     refreshDogstatsdClient: false
     reportWith: "HTTP"
-    retryLogs: true
+    showDatadogLinks: true
     targetApiURL: "https://api.datadoghq.com/api/"
-    targetHost: "localhost"
     targetLogIntakeURL: "https://http-intake.logs.datadoghq.com/v1/input/"
-    targetPort: 8125
-    targetTraceCollectionPort: 8126
     targetWebhookIntakeURL: "https://webhook-intake.datadoghq.com/api/v2/webhook/"
+    traceServiceName: "jenkins"
     useAwsInstanceHostname: false
   fingerprints:
     fingerprintCleanupDisabled: false
