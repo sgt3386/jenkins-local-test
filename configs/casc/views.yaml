@@ -1,7 +1,6 @@
 # Views
 jenkins:
 
-  myViewsTabBar: "standard"
   viewsTabBar: "standard"
 
   # These are global views; views created under My Views are not globally available and cannot be managed through JCasC

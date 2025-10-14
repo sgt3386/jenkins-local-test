@@ -22,9 +22,6 @@ credentials:
           scope: GLOBAL
           username: "ssh-user"
 jenkins:
-  agentProtocols:
-  - "JNLP4-connect"
-  - "Ping"
   authorizationStrategy:
     roleBased:
       roles:
@@ -106,7 +103,6 @@ jenkins:
       name: "Configuration as Code Logs"
   markupFormatter: "plainText"
   mode: NORMAL
-  myViewsTabBar: "standard"
   noUsageStatistics: true
   nodeMonitors:
   - "architecture"

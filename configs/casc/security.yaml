@@ -23,9 +23,6 @@ jenkins:
 
   # Agents
   slaveAgentPort: -1
-  agentProtocols:
-  - "JNLP4-connect"
-  - "Ping"
 
   # CSRF Protection
   crumbIssuer:
